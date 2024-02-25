@@ -3,10 +3,13 @@
         // https://github.com/mvdan/gofumpt?tab=readme-ov-file#visual-studio-code
         "formatting.gofumpt": true
     },
-    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
     // https://golangci-lint.run/usage/integrations/#editor-integration
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
         "--fast"
-    ]
+    ],
+    "[templ]": {
+        "editor.defaultFormatter": "a-h.templ"
+    },
 }
