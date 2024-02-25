@@ -12,7 +12,8 @@
         "golang.go",
         "github.copilot",
         "github.copilot-chat",
-        "vscode-icons-team.vscode-icons"
+        "vscode-icons-team.vscode-icons",
+        "a-h.templ"
       ]
     }
   }
