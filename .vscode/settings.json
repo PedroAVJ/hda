@@ -3,13 +3,21 @@
         // https://github.com/mvdan/gofumpt?tab=readme-ov-file#visual-studio-code
         "formatting.gofumpt": true
     },
-    "editor.formatOnType": true,
+    // Since not all lsp's support formatting a selection,
+    // we can't use "editor.formatOnSave" for all file types.
+    // https://code.visualstudio.com/docs/editor/codebasics#_formatting
+    "editor.formatOnSave": true,
     // https://golangci-lint.run/usage/integrations/#editor-integration
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
         "--fast"
     ],
+    // https://templ.guide/commands-and-tools/ide-support#format-on-save
     "[templ]": {
         "editor.defaultFormatter": "a-h.templ"
+    },
+    // https://templ.guide/commands-and-tools/ide-support#emmet-html-completion
+    "emmet.includeLanguages": {
+        "templ": "html"
     },
 }
