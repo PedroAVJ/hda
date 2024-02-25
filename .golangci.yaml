@@ -3,3 +3,5 @@
 # https://golangci-lint.run/usage/configuration/#linters-settings-configuration
 linters:
   enable-all: true
+  disable:
+    - depguard
