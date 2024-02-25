@@ -1,0 +1,12 @@
+{
+    "gopls": {
+        // As per https://github.com/mvdan/gofumpt?tab=readme-ov-file#visual-studio-code
+        // on editor integration
+        "formatting.gofumpt": true,
+        // As per https://staticcheck.dev/ on editor integration
+        "ui.diagnostic.staticcheck": true
+    },
+    "[go]": {
+        "editor.formatOnSave": true
+    }
+}
