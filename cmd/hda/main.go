@@ -3,9 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/gin-gonic/gin"
-
 	"github.com/PedroAVJ/hda/internal/handlers"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -14,8 +13,7 @@ func main() {
 	handlers.SetupRoutes(r)
 
 	// listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
-	err := r.Run()
-	if err != nil {
+	if err := r.Run(); err != nil {
 		log.Fatal(err)
 	}
 }
