@@ -1,9 +1,21 @@
 package main
 
 import (
-	"fmt"
+	"log"
+
+	"github.com/gin-gonic/gin"
+
+	"github.com/PedroAVJ/hda/internal/handlers"
 )
 
 func main() {
-	fmt.Println("Hello, World!")
+	r := gin.Default()
+
+	handlers.SetupRoutes(r)
+
+	// listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+	err := r.Run()
+	if err != nil {
+		log.Fatal(err)
+	}
 }
