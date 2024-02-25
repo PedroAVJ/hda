@@ -1,0 +1,19 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/go:1.22",
+  "forwardPorts": [8080],
+  "postCreateCommand": "echo 'Ready!'",
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "golang.go",
+        "github.copilot",
+        "github.copilot-chat",
+        "vscode-icons-team.vscode-icons"
+      ]
+    }
+  }
+}
