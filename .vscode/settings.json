@@ -3,9 +3,7 @@
         // https://github.com/mvdan/gofumpt?tab=readme-ov-file#visual-studio-code
         "formatting.gofumpt": true
     },
-    "[go]": {
-        "editor.formatOnSave": true
-    },
+    "editor.formatOnSave": true,
     // https://golangci-lint.run/usage/integrations/#editor-integration
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
