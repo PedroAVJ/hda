@@ -1,19 +1,17 @@
 package main
 
 import (
-	"log"
+	"net/http"
 
-	"github.com/PedroAVJ/hda/internal/handlers"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	r := gin.Default()
+	router := gin.Default()
 
-	handlers.SetupRoutes(r)
+	router.GET("/", func(c *gin.Context) {
+		c.String(http.StatusOK, "Hello, World!")
+	})
 
-	// listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
-	if err := r.Run(); err != nil {
-		log.Fatal(err)
-	}
+	router.Run(":8080")
 }
