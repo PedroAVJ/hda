@@ -1,17 +1,12 @@
 package main
 
 import (
-	"net/http"
-
-	"github.com/gin-gonic/gin"
+	"github.com/PedroAVJ/hda/pkg/handlers"
+	"github.com/labstack/echo/v4"
 )
 
 func main() {
-	router := gin.Default()
-
-	router.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "Hello, World!")
-	})
-
-	router.Run(":8080")
+	app := echo.New()
+	app.GET("/", handlers.HomeHandler)
+	app.Logger.Fatal(app.Start(":4000"))
 }
